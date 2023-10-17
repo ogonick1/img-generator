@@ -1,0 +1,26 @@
+<h1 class="text-center">Img Generator</h1>
+
+<form action="/" method="post">
+  <input
+    type="text"
+    class="form-control mb-2"
+    placeholder="enter img params"
+    name="prompt"
+  />
+
+  <select name="size" id="size" class="form-control mb-2">
+    <option value="256x256">256</option>
+    <option value="512x512">512</option>
+    <option value="1024x1024">1024</option>
+  </select>
+
+  <input type="number" class="form-control mb-2" name="number" value="1" />
+  <button type="submit" class="btn btn-primary">Generated</button>
+</form>
+{{#if images}}
+<div class="row">
+  {{#each images}}
+  <img src="{{this.url}}" class="img-fluid rounded">
+  {{/each}}
+</div>
+{{/if}}
