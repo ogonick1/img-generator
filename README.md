@@ -1,0 +1,3 @@
+# img-generator
+nodejs
+openAi
